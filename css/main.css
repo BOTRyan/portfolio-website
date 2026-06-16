@@ -67,23 +67,22 @@ body {
 }
 
 .header .header-menu .header-menu-option:hover {
-    color: #334155;
-    border-bottom-color: #334155;
-    font-weight: 700;
+    color: #1D4ED8 !important;
+    border-bottom-color: #1E293B !important;
+    ;
 }
 
 .header .header-menu .header-menu-option:focus-visible {
-    color: #334155;
-    outline: 2px solid #334155;
+    color: #1D4ED8 !important;
+    outline: 2px solid #1E293B;
     outline-offset: 2.5px;
-    border-bottom-color: #334155;
-    font-weight: 700;
+    border-bottom-color: #1E293B !important;
 }
 
 .header .header-menu .header-menu-option.active {
-    color: #334155;
-    border-bottom-color: #334155;
-    font-weight: 700;
+    color: #1E293B;
+    border-bottom-color: #1E293B;
+    border-bottom: 3px solid;
 }
 
 .header .header-menu .header-menu-button {
@@ -107,7 +106,7 @@ body {
 }
 
 .header .header-menu .header-menu-button:focus-visible {
-    outline: 2px solid #334155;
+    outline: 2px solid #0F172A;
     outline-offset: 2.5px;
     border: none;
     background-color: #DBEAFE;
@@ -141,7 +140,7 @@ h1 {
 }
 
 .contact p {
-    color: #334155;
+    color: #1E293B;
     margin-bottom: 1.5rem;
 }
 
@@ -160,14 +159,15 @@ h1 {
 }
 
 .contact-links a:hover {
-    color: #334155;
-    border-bottom-color: #334155;
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
 }
 
 .contact-links a:focus-visible {
-    outline: 2px solid #334155;
+    outline: 2px solid #1E293B;
     outline-offset: 2.5px;
-    border-bottom-color: #334155;
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
 }
 
 .footer {
