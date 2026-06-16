@@ -1,0 +1,137 @@
+/*Background: #F8FAFC
+Text:       #1E293B
+Accent:     #334155
+Footer:     #0F172A
+Borders:    #E2E8F0*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-height: 4rem;
+    background: #FFFFFF;
+    color: #1E293B;
+    border-bottom: solid 1px #E2E8F0;
+}
+
+.header > .header-title {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #1E293B;
+}
+
+.header > .header-title:focus-visible {
+    outline: 2px solid #1E293B;
+    outline-offset: 2.5px;
+    border: none;
+}
+
+.header .header-menu {
+    margin-left: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-menu .header-menu-option {
+    color: #1E293B;
+    margin: 0 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.header .header-menu .header-menu-option:hover {
+    color: #334155;
+    border-bottom-color: #334155;
+}
+
+.header .header-menu .header-menu-option:focus-visible {
+    color: #334155;
+    outline: 2px solid #334155;
+    outline-offset: 2.5px;
+    border-bottom-color: #334155;
+}
+
+.header .header-menu .header-menu-button {
+    width: 4rem;
+    height: 4rem;
+    color: #1E293B;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    border-left: solid 1px #E2E8F0;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.header .header-menu .header-menu-button:hover {
+    background-color: #E2E8F0;
+}
+
+.header .header-menu .header-menu-button:focus-visible {
+    outline: 2px solid #334155;
+    outline-offset: 2.5px;
+    border: none;
+    background-color: #DBEAFE;
+}
+
+@media (max-width: 768px) {
+    .header .header-menu .header-menu-option {
+        display: none;
+    }
+
+    .header .header-menu .header-menu-button {
+        display: flex;
+    }
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #0F172A;
+    font-size: 0.75rem;
+    height: 3rem;
+}
+
+.footer .footer-copyright {
+    color: #E2E8F0;
+    margin: 1rem;
+}
