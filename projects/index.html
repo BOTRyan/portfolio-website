@@ -4,10 +4,15 @@
 <head>
     <title>Projects | Ryan O'Connor</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ryan O'Connor, a .NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, JavaScript, HTML, and CSS." />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-    <script src="../js/main.js" defer></script>
+    <meta name="author" content="Ryan O'Connor">
+    <meta name="theme-color" content="#1E293B">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script src="js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -31,6 +36,13 @@
             </button>
         </nav>
     </header>
+    <dialog class="header-mobile-menu">
+        <button type="button" class="header-close-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" id="icon" width="32" height="32" viewBox="0 0 32 32">
+                <polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16" />
+            </svg>
+        </button>
+    </dialog>
     <main class="main">
         <h1>Projects</h1>
     </main>
@@ -49,5 +61,30 @@
         </div>
     </footer>
 </body>
+
+<script>
+    const openButton = document.querySelector(".header-menu-button");
+    const closeButton = document.querySelector(".header-close-menu-button");
+    const dialog = document.querySelector(".header-mobile-menu");
+
+    openButton.addEventListener("click", () => {
+        openMenu();
+    });
+
+    closeButton.addEventListener("click", () => {
+        closeMenu();
+    })
+
+    function openMenu() {
+        dialog.showModal();
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        dialog.close();
+        document.body.style.overflow = "";
+    }
+
+</script>
 
 </html>
