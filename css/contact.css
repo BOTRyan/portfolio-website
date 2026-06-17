@@ -8,40 +8,6 @@
     margin-bottom: 1rem;
 }
 
-.contact-links {
-    display: flex;
-    flex-direction: row;
-}
-
-.contact-links .contact-links-separator {
-    border-right: 2px solid;
-    height: 1rem;
-    margin: auto 0;
-    margin-right: 1rem;
-}
-
-.contact-links a {
-    color: #1E293B;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    margin-right: 1rem;
-    margin-left: 0px;
-    width: fit-content;
-    transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.contact-links a:hover {
-    color: #1D4ED8;
-    border-bottom-color: #1E293B;
-}
-
-.contact-links a:focus-visible {
-    outline: 2px solid #1E293B;
-    outline-offset: 2.5px;
-    color: #1D4ED8;
-    border-bottom-color: #1E293B;
-}
-
 .email-form {
     margin-bottom: 1rem;
     border: solid 2px #E2E8F0;
@@ -168,25 +134,25 @@ h2 {
     opacity: 0.65;
 }
 
-.email-form .email-form-direct {
-    font-size: 0.875rem;
-    margin: 1rem 1.25rem;
+.email-form-direct {
+    font-size: 1rem;
+    line-height: 1.5rem;
     margin-top: 0;
 }
 
-.email-form .email-form-direct a {
+.email-form-direct a {
     color: #1E293B;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.email-form .email-form-direct a:hover {
+.email-form-direct a:hover {
     color: #1D4ED8;
     border-bottom-color: #1E293B;
 }
 
-.email-form .email-form-direct a:focus-visible {
+.email-form-direct a:focus-visible {
     outline: 2px solid #1E293B;
     outline-offset: 2.5px;
     color: #1D4ED8;
