@@ -7,7 +7,7 @@
     <meta name="description" content="Portfolio of Ryan O'Connor, a .NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, JavaScript, HTML, and CSS." />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/contact.css" />
-    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
     <script src="../js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,17 +54,17 @@
 
                 <div class="email-form-item">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" maxlength="5000" rows="6" placeholder="Tell me about your project, opportunity, or question." required></textarea>
+                    <textarea id="message" name="message" maxlength="2000" rows="6" placeholder="Tell me about your project, opportunity, or question." required></textarea>
                     <div id="messageCharCountParent" class="email-character-count">
                         Character Count:
-                        <span id="messageCharCount" aria-live="polite" aria-atomic="true">0</span> / 5000
+                        <span id="messageCharCount" aria-live="polite" aria-atomic="true">0</span> / 2000
                     </div>
                 </div>
 
                 <div class="email-form-item removeTopMargin">
                     <button type="submit">Send Message</button>
                 </div>
-                <p class="email-form-status removeTopMargin" aria-live="polite"></p>
+                <p class="email-form-status removeTopMargin" aria-live="polite">test</p>
 
                 <p class="email-form-direct">Or email me directly at
                     <a href="mailto:oconnorkryan@gmail.com">oconnorkryan@gmail.com</a>
@@ -74,6 +74,8 @@
             <h2>Additional Links</h2>
 
             <div class="contact-links">
+                <a href="/assets/O'ConnorRyan_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <div class="contact-links-separator"></div>
                 <a href="https://www.linkedin.com/in/oconnorkryan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <div class="contact-links-separator"></div>
                 <a href="https://github.com/BOTRyan" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -98,7 +100,7 @@
         textarea.addEventListener('input', () => {
 
             const count = textarea.value.length;
-            const max = 5000;
+            const max = 2000;
             const percent = count / max;
 
             charCountSpan.textContent = count;

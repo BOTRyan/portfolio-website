@@ -4,28 +4,27 @@
 
 .contact p {
     color: #1E293B;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contact-links {
     display: flex;
     flex-direction: row;
-
 }
 
 .contact-links .contact-links-separator {
     border-right: 2px solid;
-    height: 1.25rem;
+    height: 1rem;
     margin: auto 0;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
 }
 
 .contact-links a {
     color: #1E293B;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     margin-left: 0px;
     width: fit-content;
     transition: border-color 0.2s ease, color 0.2s ease;
@@ -44,7 +43,7 @@
 }
 
 .email-form {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     border: solid 2px #E2E8F0;
     display: flex;
     flex-direction: column;
@@ -54,30 +53,30 @@
 }
 
 h2 {
-    margin: 1.25rem 0 0.875rem 0;
+    margin: 1rem 0 1rem 0;
     padding: 0px;
 }
 
 .email-form > h2 {
-    margin: 0.875rem 1.25rem;
+    margin: 1rem 1.25rem;
     margin-bottom: 0px !important;
 }
 
 .email-form .email-form-status {
-    margin: 0.875rem 1.25rem;
+    margin: 1rem 1.25rem;
     font-size: 0.875rem;
     font-weight: 500;
     display: none;
 }
 
 .email-form .email-form-status.success {
-    margin: 0.875rem 1.25rem;
+    margin: 1rem 1.25rem;
     font-size: 0.875rem;
     color: #15803D;
 }
 
 .email-form .email-form-status.error {
-    margin: 0.875rem 1.25rem;
+    margin: 1rem 1.25rem;
     font-size: 0.875rem;
     color: #B91C1C;
 }
@@ -171,7 +170,7 @@ h2 {
 
 .email-form .email-form-direct {
     font-size: 0.875rem;
-    margin: 0.875rem 1.25rem;
+    margin: 1rem 1.25rem;
     margin-top: 0;
 }
 
