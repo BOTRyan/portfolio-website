@@ -1,0 +1,199 @@
+.contact {
+    max-width: 900px;
+}
+
+.contact p {
+    color: #1E293B;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contact-links .contact-links-separator {
+    border-right: 2px solid;
+    height: 1.25rem;
+    margin: auto 0;
+    margin-right: 1.25rem;
+}
+
+.contact-links a {
+    color: #1E293B;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-right: 1.25rem;
+    margin-left: 0px;
+    width: fit-content;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-links a:hover {
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
+}
+
+.contact-links a:focus-visible {
+    outline: 2px solid #1E293B;
+    outline-offset: 2.5px;
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
+}
+
+.email-form {
+    margin-bottom: 1.25rem;
+    border: solid 2px #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+h2 {
+    margin: 1.25rem 0 0.875rem 0;
+    padding: 0px;
+}
+
+.email-form > h2 {
+    margin: 0.875rem 1.25rem;
+    margin-bottom: 0px !important;
+}
+
+.email-form .email-form-status {
+    margin: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: none;
+}
+
+.email-form .email-form-status.success {
+    margin: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    color: #15803D;
+}
+
+.email-form .email-form-status.error {
+    margin: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    color: #B91C1C;
+}
+
+
+.email-form .email-form-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0.875rem 1.25rem;
+}
+
+.email-form .email-form-item > label {
+    margin-bottom: 5px;
+}
+
+.email-form .email-form-item > input,
+.email-form .email-form-item > textarea,
+.email-form .email-form-item > button {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #1E293B;
+    background-color: #FFF;
+    border: solid 2px #0F172A;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 1.5rem;
+    resize: none;
+    font-size: 0.875rem;
+}
+
+.email-form .email-form-item > input:focus-visible,
+.email-form .email-form-item > textarea:focus-visible {
+    outline: none;
+    border-color: #334155;
+    box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.15);
+}
+
+.email-form .email-form-item .email-character-count {
+    margin-left: auto;
+    margin-top: 2.5px;
+    text-align: right;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 0.875rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.email-form .email-form-item .email-character-count.warning {
+    color: #CA8A04 !important;
+    background-color: rgba(202, 138, 4, 0.08);
+    font-weight: 600;
+}
+
+.email-form .email-form-item .email-character-count.danger {
+    color: #B91C1C !important;
+    background-color: rgba(185, 28, 28, 0.08);
+    font-weight: 600;
+}
+
+.email-form .email-form-item > button {
+    font-weight: 700;
+    max-width: 150px;
+    transition: background-color 0.2s ease;
+}
+
+.email-form .email-form-item > button:hover,
+.email-form .email-form-item > button:focus-visible {
+    outline: none;
+    border-color: #334155;
+    background-color: #E2E8F0;
+    box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.15);
+}
+
+.email-form .email-form-item > button:active {
+    background-color: #CBD5E1;
+}
+
+.email-form .email-form-item > button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.email-form .email-form-item > input::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #1E293B;
+    opacity: 0.65;
+}
+
+.email-form .email-form-direct {
+    font-size: 0.875rem;
+    margin: 0.875rem 1.25rem;
+    margin-top: 0;
+}
+
+.email-form .email-form-direct a {
+    color: #1E293B;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.email-form .email-form-direct a:hover {
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
+}
+
+.email-form .email-form-direct a:focus-visible {
+    outline: 2px solid #1E293B;
+    outline-offset: 2.5px;
+    color: #1D4ED8;
+    border-bottom-color: #1E293B;
+}
+
+.removeTopMargin {
+    margin-top: 0px !important;
+}

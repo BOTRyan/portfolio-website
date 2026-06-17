@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Portfolio of Ryan O'Connor, a .NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, JavaScript, HTML, and CSS." />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <script src="../js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +16,19 @@
 
 <body>
     <header class="header">
-        <div class="header-title" tabindex="1">Ryan O'Connor</div>
-
+        <a href="/" class="header-title" tabindex="1">Ryan O'Connor</a>
         <nav class="header-menu">
             <a href="/" class="header-menu-option">Home</a>
             <a href="/projects/" class="header-menu-option">Projects</a>
             <a href="/contact/" class="header-menu-option active">Contact</a>
-            <button class="header-menu-button">
-                ☰
+            <button type="button" class="header-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 0 32 32">
+                    <title>menu</title>
+                    <rect x="4" y="6" width="24" height="2" />
+                    <rect x="4" y="24" width="24" height="2" />
+                    <rect x="4" y="12" width="24" height="2" />
+                    <rect x="4" y="18" width="24" height="2" />
+                </svg>
             </button>
         </nav>
     </header>
@@ -34,12 +40,47 @@
                 Feel free to reach out if you'd like to connect, collaborate, or discuss opportunities.
             </p>
 
+            <form action="https://formspree.io/f/xaqzkzel" method="POST" class="email-form">
+                <h2>Email</h2>
+                <div class="email-form-item">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
+                </div>
+
+                <div class="email-form-item">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
+                </div>
+
+                <div class="email-form-item">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" maxlength="5000" rows="6" placeholder="Tell me about your project, opportunity, or question." required></textarea>
+                    <div id="messageCharCountParent" class="email-character-count">
+                        Character Count:
+                        <span id="messageCharCount" aria-live="polite" aria-atomic="true">0</span> / 5000
+                    </div>
+                </div>
+
+                <div class="email-form-item removeTopMargin">
+                    <button type="submit">Send Message</button>
+                </div>
+                <p class="email-form-status removeTopMargin" aria-live="polite"></p>
+
+                <p class="email-form-direct">Or email me directly at
+                    <a href="mailto:oconnorkryan@gmail.com">oconnorkryan@gmail.com</a>
+                </p>
+            </form>
+
+            <h2>Additional Links</h2>
+
             <div class="contact-links">
-                <a href="mailto:oconnorkryan@gmail.com">Email</a>
-                <a href="https://github.com/BOTRyan" target="_blank">GitHub</a>
-                <a href="https://botryguy.itch.io/" target="_blank">Itch.io</a>
-                <a href="https://www.linkedin.com/in/oconnorkryan/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/oconnorkryan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <div class="contact-links-separator"></div>
+                <a href="https://github.com/BOTRyan" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <div class="contact-links-separator"></div>
+                <a href="https://botryguy.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
             </div>
+
         </section>
     </main>
     <footer class="footer">
@@ -48,5 +89,78 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.getElementById('message');
+        const charCountSpanParent = document.getElementById('messageCharCountParent');
+        const charCountSpan = document.getElementById('messageCharCount');
 
-</html>
+        textarea.addEventListener('input', () => {
+
+            const count = textarea.value.length;
+            const max = 5000;
+            const percent = count / max;
+
+            charCountSpan.textContent = count;
+
+            charCountSpanParent.classList.remove("warning", "danger");
+
+            if (percent >= 0.95) {
+                charCountSpanParent.classList.add("danger");
+            } else if (percent >= 0.8) {
+                charCountSpanParent.classList.add("warning");
+            }
+        });
+
+        const form = document.querySelector(".email-form");
+        const status = document.querySelector(".email-form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const button = form.querySelector("button");
+            var responseText = "";
+            var wasSuccessful = false;
+
+            status.classList.remove("success", "error");
+            status.style.display = "block";
+            button.disabled = true;
+            button.textContent = "Sending...";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+                if (response.ok) {
+                    responseText = "Message sent successfully!";
+                    wasSuccessful = true;
+                    charCountSpan.textContent = "0";
+                    charCountSpanParent.classList.remove("warning", "danger");
+                    form.reset();
+                } else {
+                    responseText = "Something went wrong. Please try again.";
+                }
+            } catch (err) {
+                responseText = "Network error. Please try again.";
+            }
+
+            setTimeout(() => {
+                if (wasSuccessful) status.classList.add("success");
+                else status.classList.add("error");
+                status.textContent = responseText;
+                button.disabled = false;
+                button.textContent = "Send Message";
+            }, 1000);
+        });
+
+        form.addEventListener("input", () => {
+            status.style.display = "none";
+            status.classList.remove("success", "error");
+            status.textContent = "";
+        })
+    });
+</script></html>
