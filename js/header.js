@@ -1,7 +1,7 @@
     const menuButton = document.querySelector(".header-menu-button");
     const menu = document.querySelector(".header-mobile-menu");
     const backdrop = document.querySelector(".header-mobile-backdrop");
-    const desktopMediaQuery = window.matchMedia("(min-width: 768px)");
+    const desktopMediaQuery = window.matchMedia("(min-width: 769px)");
 
     desktopMediaQuery.addEventListener("change", event => {
         if (event.matches) {
@@ -25,6 +25,7 @@
 
         document.querySelector("main").inert = true;
         document.querySelector("footer").inert = true;
+        document.querySelector(".header-skip-link").inert = true;
 
         menuButton.setAttribute("aria-expanded", "true");
 
@@ -40,6 +41,7 @@
 
         document.querySelector("main").inert = false;
         document.querySelector("footer").inert = false;
+        document.querySelector(".header-skip-link").inert = false;
 
         menuButton.setAttribute("aria-expanded", "false");
 

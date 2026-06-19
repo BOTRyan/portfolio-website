@@ -38,7 +38,6 @@ h1 {
     justify-content: space-between;
     background: #0F172A;
     font-size: 0.75rem;
-    height: 3rem;
 }
 
 .footer .footer-copyright {
@@ -79,4 +78,11 @@ h1 {
     outline-offset: 2.5px;
     color: #FFF;
     border-bottom-color: #E2E8F0;
+}
+
+@media (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
 }
