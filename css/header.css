@@ -1,3 +1,33 @@
+.header-skip-link {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.2s ease, padding 0.2s ease;
+}
+
+.header-skip-link:focus-within {
+    max-height: 60px;
+    padding: 1rem 0;
+}
+
+.header-skip-link > a {
+    color: #1E293B;
+    font-weight: 550;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.header-skip-link > a:focus {
+    color: #1D4ED8;
+    outline: 2px solid #1E293B;
+    outline-offset: .5rem;
+    border-bottom-color: #1E293B;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -18,7 +48,7 @@
 
 .header > .header-title:focus-visible {
     outline: 2px solid #1E293B;
-    outline-offset: 2.5px;
+    outline-offset: .5rem;
     border: none;
 }
 
@@ -45,13 +75,12 @@
 .header .header-menu .header-menu-option:hover {
     color: #1D4ED8 !important;
     border-bottom-color: #1E293B !important;
-    ;
 }
 
 .header .header-menu .header-menu-option:focus-visible {
     color: #1D4ED8 !important;
     outline: 2px solid #1E293B;
-    outline-offset: 2.5px;
+    outline-offset: .5rem;
     border-bottom-color: #1E293B !important;
 }
 
@@ -59,6 +88,7 @@
     color: #1E293B;
     border-bottom-color: #1E293B;
     border-bottom: 3px solid;
+    transition: border-bottom 0.2s ease;
 }
 
 .header .header-menu .header-menu-button {
@@ -81,9 +111,9 @@
 }
 
 .header .header-menu .header-menu-button:focus-visible {
-    outline: 2px solid #0F172A;
-    outline-offset: 2.5px;
-    border: none;
+    box-shadow: inset 0px 0px 0px 2px #1E293B;
+    border: none !important;
+    outline: none !important;
     background-color: #DBEAFE;
 }
 
@@ -166,18 +196,21 @@
     font-size: 1rem;
     text-decoration: none;
     user-select: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
+    border: none;
+    outline: none !important;
 }
 
 .header-mobile-menu .header-mobile-nav > a:hover {
     background-color: #DBEAFE;
+    border: none !important;
+    outline: none !important;
     transition: background-color 0.2s ease;
 }
 
 .header-mobile-menu .header-mobile-nav > a:focus-visible {
     background-color: #DBEAFE;
-    outline: 2px solid #1E293B;
-    border: none;
+    box-shadow: inset 0px 0px 0px 2px #1E293B;
+    border: none !important;
+    outline: none !important;
     transition: background-color 0.2s ease;
 }

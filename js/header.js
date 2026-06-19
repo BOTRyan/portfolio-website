@@ -18,6 +18,8 @@
 
     function openMenu() {
         menu.classList.add("is-open");
+        menu.inert = false;
+
         backdrop.classList.add("is-open");
         menuButton.classList.add("is-open");
 
@@ -31,6 +33,8 @@
 
     function closeMenu() {
         menu.classList.remove("is-open");
+        menu.inert = true;
+
         backdrop.classList.remove("is-open");
         menuButton.classList.remove("is-open");
 
