@@ -119,16 +119,6 @@
     }
 }
 
-@media (min-width: 768px) {
-    .header-mobile-menu {
-        display: none;
-    }
-
-    .header-mobile-backdrop {
-        display: none;
-    }
-}
-
 .header-mobile-menu {
     position: fixed;
     top: 4rem;
