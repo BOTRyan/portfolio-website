@@ -75,7 +75,7 @@ h1 {
 
 .footer-links a:focus-visible {
     outline: 2px solid #E2E8F0;
-    outline-offset: 2.5px;
+    outline-offset: .5rem;
     color: #FFF;
     border-bottom-color: #E2E8F0;
 }
