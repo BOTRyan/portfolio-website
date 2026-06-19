@@ -1,0 +1,193 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-height: 4rem;
+    background: #FFFFFF;
+    color: #1E293B;
+    border-bottom: solid 2px #E2E8F0;
+}
+
+.header > .header-title {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #1E293B;
+}
+
+.header > .header-title:focus-visible {
+    outline: 2px solid #1E293B;
+    outline-offset: 2.5px;
+    border: none;
+}
+
+.header .header-menu {
+    margin-left: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-menu .header-menu-option {
+    color: #1E293B;
+    font-weight: 550;
+    margin: 0 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.header .header-menu .header-menu-option:hover {
+    color: #1D4ED8 !important;
+    border-bottom-color: #1E293B !important;
+    ;
+}
+
+.header .header-menu .header-menu-option:focus-visible {
+    color: #1D4ED8 !important;
+    outline: 2px solid #1E293B;
+    outline-offset: 2.5px;
+    border-bottom-color: #1E293B !important;
+}
+
+.header .header-menu .header-menu-option.active {
+    color: #1E293B;
+    border-bottom-color: #1E293B;
+    border-bottom: 3px solid;
+}
+
+.header .header-menu .header-menu-button {
+    width: 4rem;
+    height: 4rem;
+    color: #1E293B;
+    background: none;
+    border: none;
+    border-left: solid 2px #E2E8F0;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.header .header-menu .header-menu-button:hover {
+    background-color: #E2E8F0;
+}
+
+.header .header-menu .header-menu-button:focus-visible {
+    outline: 2px solid #0F172A;
+    outline-offset: 2.5px;
+    border: none;
+    background-color: #DBEAFE;
+}
+
+.header .header-menu .header-menu-button > svg {
+    width: 2rem;
+    height: 2rem;
+    color: #1E293B;
+}
+
+.header .header-menu .header-menu-button .icon-close {
+    display: none;
+}
+
+.header .header-menu .header-menu-button.is-open .icon-menu {
+    display: none;
+}
+
+.header .header-menu .header-menu-button.is-open .icon-close {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header .header-menu .header-menu-option {
+        display: none;
+    }
+
+    .header .header-menu .header-menu-button {
+        display: flex;
+    }
+
+    .header-mobile-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-mobile-menu {
+        display: none;
+    }
+
+    .header-mobile-backdrop {
+        display: none;
+    }
+}
+
+.header-mobile-menu {
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    width: calc(100vw - 5rem);
+    height: calc(100dvh - 4rem);
+    background: white;
+    border-top: 2px solid #E2E8F0;
+    border-left: 2px solid #E2E8F0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 3001;
+}
+
+.header-mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.header-mobile-backdrop {
+    position: fixed;
+    inset: 4rem 0 0 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 3000;
+}
+
+.header-mobile-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-mobile-menu .header-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-mobile-menu .header-mobile-nav > a {
+    color: #1E293B;
+    font-weight: 550;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    user-select: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.header-mobile-menu .header-mobile-nav > a:hover {
+    background-color: #DBEAFE;
+    transition: background-color 0.2s ease;
+}
+
+.header-mobile-menu .header-mobile-nav > a:focus-visible {
+    background-color: #DBEAFE;
+    outline: 2px solid #1E293B;
+    border: none;
+    transition: background-color 0.2s ease;
+}
