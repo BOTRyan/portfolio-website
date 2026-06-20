@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/contact.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <script src="/js/header.js" defer></script>
+    <script src="/js/footer.js" defer></script>
     <script src="/js/contact.js" defer></script>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
@@ -28,26 +29,7 @@
     <div class="header-skip-link">
         <a href="#maincontent">Skip to Main Content</a>
     </div>
-    <header class="header">
-        <a href="/" class="header-title">Ryan O'Connor</a>
-        <nav class="header-menu">
-            <a href="/" class="header-menu-option">Home</a>
-            <a href="/projects/" class="header-menu-option">Projects</a>
-            <a href="/contact/" class="header-menu-option active">Contact</a>
-            <button type="button" class="header-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
-                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 0 32 32">
-                    <title>menu</title>
-                    <rect x="4" y="6" width="24" height="2" />
-                    <rect x="4" y="24" width="24" height="2" />
-                    <rect x="4" y="12" width="24" height="2" />
-                    <rect x="4" y="18" width="24" height="2" />
-                </svg>
-                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" id="icon" width="32" height="32" viewBox="0 0 32 32">
-                    <polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16" />
-                </svg>
-            </button>
-        </nav>
-    </header>
+    <header id="header" class="header"></header>
     <div class="header-mobile-menu">
         <nav class="header-mobile-nav">
             <a href="/">Home</a>
@@ -67,47 +49,34 @@
             </p>
 
             <form action="https://formspree.io/f/xaqzkzel" method="POST" class="email-form">
-                <h2>Email</h2>
-                <div class="email-form-item">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
-                </div>
-
-                <div class="email-form-item">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
-                </div>
-
-                <div class="email-form-item">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" maxlength="2000" rows="6" placeholder="Tell me about your project, opportunity, or question." required></textarea>
-                    <div id="messageCharCountParent" class="email-character-count">
-                        Character Count:
-                        <span id="messageCharCount" aria-live="polite" aria-atomic="true">0</span> / 2000
+                <div class="email-form-group">
+                    <h2>Email</h2>
+                    <div class="email-form-item">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
                     </div>
+
+                    <div class="email-form-item">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
+                    </div>
+
+                    <div class="email-form-item">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" maxlength="2000" rows="6" placeholder="Tell me about your project, opportunity, or question." required></textarea>
+                        <div id="messageCharCountParent" class="email-character-count">
+                            Character Count:
+                            <span id="messageCharCount" aria-live="polite" aria-atomic="true">0</span> / 2000
+                        </div>
+                    </div>
+
+                    <div class="email-form-item removeTopMargin">
+                        <button type="submit">Send Message</button>
+                    </div>
+                    <p class="email-form-status removeTopMargin" aria-live="polite">test</p>
                 </div>
-
-                <div class="email-form-item removeTopMargin">
-                    <button type="submit">Send Message</button>
-                </div>
-                <p class="email-form-status removeTopMargin" aria-live="polite">test</p>
-
-
             </form>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-copyright">
-            © 2026 Ryan O'Connor
-        </div>
-        <div class="footer-links">
-            <a href="/assets/O'ConnorRyan_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://www.linkedin.com/in/oconnorkryan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://github.com/BOTRyan" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://botryguy.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
-        </div>
-    </footer>
+    <footer id="footer" class="footer"></footer>
 </body></html>

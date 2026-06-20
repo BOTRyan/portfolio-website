@@ -1,5 +1,5 @@
 .contact {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .contact p {
@@ -9,23 +9,24 @@
 }
 
 .email-form {
-    margin-bottom: 1rem;
     border: solid 2px #E2E8F0;
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
     background: #FFFFFF;
     border-radius: 8px;
+    padding: 2rem;
 }
 
 h2 {
-    margin: 1rem 0 1rem 0;
-    padding: 0px;
+    margin: 0;
 }
 
-.email-form > h2 {
-    margin: 1rem 1.25rem;
-    margin-bottom: 0px !important;
+.email-form .email-form-group {
+    width: 100%;
+    max-width: 600px;
 }
 
 .email-form .email-form-status {
@@ -47,16 +48,14 @@ h2 {
     color: #B91C1C;
 }
 
-
 .email-form .email-form-item {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: 0.875rem 1.25rem;
+    margin-top: 1.25rem;
 }
 
 .email-form .email-form-item > label {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .email-form .email-form-item > input,
@@ -72,6 +71,7 @@ h2 {
     line-height: 1.5rem;
     resize: none;
     font-size: 0.875rem;
+    width: 100%;
 }
 
 .email-form .email-form-item > input:focus-visible,
@@ -83,9 +83,9 @@ h2 {
 
 .email-form .email-form-item .email-character-count {
     margin-left: auto;
-    margin-top: 2.5px;
+    margin-top: 0.25rem;
     text-align: right;
-    padding: 6px;
+    padding: 0.25rem;
     border-radius: 5px;
     background-color: transparent;
     font-size: 0.875rem;

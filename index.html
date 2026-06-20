@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 
@@ -26,27 +27,7 @@
     <div class="header-skip-link">
         <a href="#maincontent">Skip to Main Content</a>
     </div>
-    <header class="header">
-        <a href="/" class="header-title">Ryan O'Connor</a>
-        <nav class="header-menu">
-            <a href="/" class="header-menu-option active">Home</a>
-            <a href="/projects/" class="header-menu-option">Projects</a>
-            <a href="/contact/" class="header-menu-option">Contact</a>
-            <button type="button" class="header-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
-                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 0 32 32">
-                    <title>menu</title>
-                    <rect x="4" y="6" width="24" height="2" />
-                    <rect x="4" y="24" width="24" height="2" />
-                    <rect x="4" y="12" width="24" height="2" />
-                    <rect x="4" y="18" width="24" height="2" />
-                </svg>
-                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" id="icon" width="32" height="32" viewBox="0 0 32 32">
-                    <title>close</title>
-                    <polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16" />
-                </svg>
-            </button>
-        </nav>
-    </header>
+    <header id="header" class="header"></header>
     <div class="header-mobile-menu" inert>
         <nav class="header-mobile-nav">
             <a href="/">Home</a>
@@ -56,21 +37,83 @@
     </div>
     <div class="header-mobile-backdrop"></div>
     <main class="main">
-        <h1><a name="maincontent" id="maincontent"></a>Home</h1>
-        <p>Test paragraph</p>
+        <section id="maincontent" tabindex="0">
+            <h1>Ryan O'Connor</h1>
+            <p>.NET Full Stack Developer specializing in ASP.NET, C#, SQL Server, JavaScript, HTML, and CSS.</p>
+        </section>
+        <section class="main-body-card" tabindex="0">
+            <h2>About Me</h2>
+            <p>
+                I currently work as a .NET Full Stack Developer for the State of Michigan, where I build and maintain enterprise web applications focused on reliability, performance, and usability.
+                <br><br>
+                Before becoming a .NET Full Stack Developer, I worked in game development and interactive media, contributing to projects built with Unity, Unreal Engine, and web technologies. That background gave me a strong foundation in problem-solving, user experience, and collaborating with teams to deliver complex projects.
+                <br><br>
+                I enjoy learning new technologies, refining development practices, and creating software that is both maintainable and impactful. Whether I'm developing full-stack web applications, optimizing database performance, or exploring new tools and frameworks, I'm always looking for opportunities to grow as a developer and build solutions that make a meaningful difference for users.
+            </p>
+        </section>
+        <section class="main-body-card skills-section" tabindex="0">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>.NET / Backend</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>ASP.NET</li>
+                        <li>SQL Server</li>
+                        <li>VB</li>
+                        <li>Entity Framework</li>
+                        <li>LINQ</li>
+                        <li>REST APIs</li>
+                        <li>JSON / XML</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frontend / Web</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>AJAX</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>LINQ</li>
+                        <li>Bootstrap</li>
+                        <li>Telerik UI</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li>IIS</li>
+                        <li>Azure DevOps</li>
+                        <li>HTML</li>
+                        <li>Git</li>
+                        <li>TFS (TFVC)</li>
+                        <li>PowerShell</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Game Development</h3>
+                    <ul>
+                        <li>Unity</li>
+                        <li>Godot</li>
+                        <li>Unreal Engine</li>
+                        <li>3DS Max</li>
+                        <li>Blender</li>
+                        <li>Substance 3D</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Accessibility & Testing</h3>
+                    <ul>
+                        <li>JAWS</li>
+                        <li>axe DevTools</li>
+                        <li>WCAG Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <div class="footer-copyright">
-            © 2026 Ryan O'Connor
-        </div>
-        <div class="footer-links">
-            <a href="/assets/O'ConnorRyan_Resume.pdf" aria-label="Download Résumé" target="_blank" rel="noopener noreferrer">Resume</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://www.linkedin.com/in/oconnorkryan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://github.com/BOTRyan" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <div class="footer-links-separator"></div>
-            <a href="https://botryguy.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
-        </div>
-    </footer>
+    <footer id="footer" class="footer"></footer>
 </body></html>
