@@ -27,7 +27,7 @@
 
 <body>
     <div class="header-skip-link">
-        <a href="#maincontent">Skip to Main Content</a>
+        <a href="#maincontent" tabindex="1">Skip to Main Content</a>
     </div>
     <header id="header" class="header"></header>
     <div class="header-mobile-menu">
@@ -39,16 +39,16 @@
     </div>
     <div class="header-mobile-backdrop"></div>
     <main class="main">
-        <section class="contact">
-            <h1><a name="maincontent" id="maincontent"></a>Contact</h1>
-
+        <section id="maincontent" class="contact" tabindex="0">
+            <h1>Contact</h1>
             <p class="email-form-direct">
                 Feel free to reach out if you'd like to connect, collaborate, or discuss opportunities with the form below.
                 <br>Or email me directly at
                 <a href="mailto:oconnorkryan@gmail.com">oconnorkryan@gmail.com</a>.
             </p>
-
-            <form action="https://formspree.io/f/xaqzkzel" method="POST" class="email-form">
+        </section>
+        <section class="contact">
+            <form action="https://formspree.io/f/xaqzkzel" aria-label="Email" method="POST" class="email-form">
                 <div class="email-form-group">
                     <h2>Email</h2>
                     <div class="email-form-item">
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="email-form-item removeTopMargin">
-                        <button type="submit">Send Message</button>
+                        <button type="submit" aria-label="Send Email">Send Message</button>
                     </div>
                     <p class="email-form-status removeTopMargin" aria-live="polite">test</p>
                 </div>

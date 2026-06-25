@@ -1,3 +1,12 @@
+/*
+#0F172A Header and Footer
+#1E293B Primary Background / Text / Borders
+#334155 Dark Hover State
+#E2E8F0 Light Text
+#FFFFFF Light Hover State
+#F8FAFC Light Backgrounds
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -12,8 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Inter", sans-serif;
-    background: #F8FAFC;
-    color: #1E293B;
+    background: #1E293B;
+    color: #E2E8F0;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -27,7 +36,7 @@ body {
 }
 
 .main section:focus-visible {
-    outline: 2px solid #1E293B;
+    outline: 2px solid #F8FAFC;
     outline-offset: .25rem;
     border: none;
 }
@@ -38,21 +47,25 @@ h1 {
 }
 
 p {
-    color: #1E293B;
+    color: #E2E8F0;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .main-body-card {
     margin: 1rem 0;
-    border: solid 2px #E2E8F0;
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    background: #FFFFFF;
+    background: #FFF;
     border-radius: 8px;
     padding: 2rem;
+}
+
+.main-body-card > p,
+.main-body-card > h2 {
+    color: #1E293B;
 }
 
 .main-body-card > h2,
@@ -78,8 +91,8 @@ p {
 }
 
 .skill-card {
-    background: #ffffff;
-    border: solid 2px #E2E8F0;
+    background: #F8FAFC;
+    border: solid 2px #1E293B;
     border-radius: 8px;
     padding: 1.75rem;
     width: 350px;
@@ -108,8 +121,8 @@ p {
 }
 
 .skill-card li {
-    background: #F8FAFC;
-    border: solid 2px #E2E8F0;
+    background: #FFF;
+    border: solid 2px #1E293B;
     padding: 0.5rem 0.5rem;
     border-radius: 8px;
     font-size: .875rem;

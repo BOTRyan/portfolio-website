@@ -1,0 +1,14 @@
+/*
+#0F172A Header and Footer
+#1E293B Primary Background / Text / Borders
+#334155 Dark Hover State
+#E2E8F0 Light Text
+#FFFFFF Light Hover State
+#F8FAFC Light Backgrounds
+*/
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
