@@ -117,6 +117,8 @@ h2 {
 .email-form .email-form-item > button {
     font-weight: 700;
     max-width: 150px;
+    user-select: none;
+    text-decoration: none;
     transition: background-color 0.2s ease;
 }
 

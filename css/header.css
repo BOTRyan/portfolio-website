@@ -25,6 +25,7 @@
     color: #FFF;
     font-weight: 550;
     font-size: 1rem;
+    user-select: none;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
@@ -49,6 +50,7 @@
 
 .header > .header-title {
     margin-left: 1.25rem;
+    user-select: none;
     text-decoration: none;
     color: #E2E8F0;
 }
@@ -73,6 +75,7 @@
     font-weight: 550;
     margin: 0 1.25rem;
     font-size: 1.25rem;
+    user-select: none;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding-bottom: 2px;
